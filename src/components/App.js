@@ -1,11 +1,13 @@
 import React from "react";
-import Table from "./Table";
+import Summary from "./Summary";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <h1>Personal Budget Tracker</h1>
-      <Table />
+      <Summary />
     </div>
   );
 }

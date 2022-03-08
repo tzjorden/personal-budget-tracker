@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LineItem from "./LineItem";
 
-function Table() {
+function Summary() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Table() {
   });
 
   return (
-    <div className="table">
+    <div className="Summary">
       <h2>Summary</h2>
       <div className="line-item">
         <div className="line-item-box-btn"></div>
@@ -56,4 +56,4 @@ function Table() {
   );
 }
 
-export default Table;
+export default Summary;
