@@ -1,24 +1,39 @@
-/* . {
+html {
   margin: 0;
   padding: 0;
-} */
-
-h1 {
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
 
 .table {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.table-header {
+  font-weight: bold;
 }
 
 .line-item {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  width: 85%;
 }
 
 .line-item-box {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid gray;
+  padding: 0.2em;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+}
+
+.line-item-box-btn {
+  display: flex;
+  border: 1px solid gray;
+  padding: 0.2em;
+  width: 5%;
+  padding: 0.3em;
 }

@@ -31,7 +31,26 @@ function Table() {
 
   return (
     <div className="table">
-      <h2>(table) Income / expenses</h2>
+      <h2>Summary</h2>
+      <div className="line-item">
+        <div className="line-item-box-btn"></div>
+        <div className="line-item-box">
+          <strong>Description</strong>
+        </div>
+        <div className="line-item-box">
+          <strong>Monthly</strong>
+        </div>
+        <div className="line-item-box">
+          <strong>Annual</strong>
+        </div>
+        <div className="line-item-box">
+          <strong>Frequency</strong>
+        </div>
+        <div className="line-item-box">
+          <strong>Notes</strong>
+        </div>
+        <div className="line-item-box-btn"></div>
+      </div>
       {lineItem}
     </div>
   );
