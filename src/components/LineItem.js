@@ -13,3 +13,4 @@ function LineItem({ description, monthly, annual, frequency, notes }) {
 }
 
 export default LineItem;
+ 
