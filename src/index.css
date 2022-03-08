@@ -1,11 +1,15 @@
 html {
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
 }
 
-.table {
+.prompt {
+  text-align: center;
+}
+
+.summary {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +22,8 @@ html {
 .line-item {
   display: flex;
   flex-direction: row;
-  width: 85%;
+  width: 80%;
+  justify-content: center;
 }
 
 .line-item-box {
@@ -35,5 +40,10 @@ html {
   border: 1px solid gray;
   padding: 0.2em;
   width: 5%;
-  padding: 0.3em;
+  /* padding: 0.3em; */
+}
+
+.btn {
+  background-color: white;
+  border: none;
 }

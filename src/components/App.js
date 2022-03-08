@@ -1,5 +1,5 @@
 import React from "react";
-import Summary from "./Summary";
+import Tracker from "./Tracker";
 import Navbar from "./Navbar";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Navbar />
       <h1>Personal Budget Tracker</h1>
-      <Summary />
+      <Tracker />
     </div>
   );
 }
