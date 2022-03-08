@@ -1,0 +1,49 @@
+import React, { useState, useEffect } from "react";
+
+function LineItemIncome({ description, amount, notes, id, setIncome }) {
+  // const [remove, setRemove] = useState(false);
+
+  function handleDelete(e) {
+    console.log(e.target.id);
+    const decision = prompt(
+      "Type DELETE if you want to delete this item? \n(This action cannot be undone)"
+    );
+    if (decision.toUpperCase() === "DELETE") {
+      fetch(`http://localhost:9292/delete_income/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((resp) => {
+        console.log(resp);
+      });
+      setIncome((currentIncome) =>
+        currentIncome.filter((income) => income.id !== id)
+      );
+    }
+  }
+
+  function handleEdit(e) {
+    e.preventDefault();
+  }
+
+  return (
+    <div className="line-item">
+      <div className="line-item-box-btn">
+        <button className="btn" onClick={handleEdit} value={id}>
+          ✎
+        </button>
+      </div>
+      <div className="line-item-box">{description}</div>
+      <div className="line-item-box">{amount}</div>
+      <div className="line-item-box">{notes}</div>
+      <div className="line-item-box-btn">
+        <button className="btn" onClick={handleDelete} id={id}>
+          🅇
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default LineItemIncome;
