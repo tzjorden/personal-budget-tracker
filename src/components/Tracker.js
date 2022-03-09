@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import ExpensesTable from "./ExpensesTable";
 import IncomeTable from "./IncomeTable";
 import Summary from "./Summary";
@@ -17,7 +18,7 @@ function Tracker() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:9292/income")
+    fetch("http://localhost:9292/incomes")
       .then((r) => r.json())
       .then((incomes) => {
         // console.log(incomes);

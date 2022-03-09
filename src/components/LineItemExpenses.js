@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 function LineItemExpenses({
   description,
-  monthly,
-  annual,
+  cost,
+  date,
   frequency,
   dueDate,
   paid,
@@ -20,8 +20,7 @@ function LineItemExpenses({
       body: JSON.stringify({ paid: !paid }),
     });
     setExpenses((currentExpenses) => {
-      console.log(currentExpenses);
-      return currentExpenses.map((expense) => expense);
+      return currentExpenses.filter((expense) => expense);
     });
   }
 
@@ -38,22 +37,23 @@ function LineItemExpenses({
     });
   }
 
-  function handleEdit(e) {
-    e.preventDefault();
-  }
+  // function handleEdit(e) {
+  //   e.preventDefault();
+  // }
 
   return (
     <div className="line-item">
       <div className="line-item-box-btn">
-        <button className="btn" onClick={handleEdit} value={id}>
+        <button className="btn" onClick={null} value={id}>
           ✎
         </button>
       </div>
       <div className="line-item-box">{description}</div>
-      <div className="line-item-box">{monthly}</div>
-      <div className="line-item-box">{annual}</div>
+      <div className="line-item-box">{cost}</div>
+      <div className="line-item-box">{date}</div>
       <div className="line-item-box">{frequency}</div>
       <div className="line-item-box">{dueDate}</div>
+      <div className="line-item-box">{paid}</div>
       <div className="line-item-box">{notes}</div>
       <div className="line-item-box-btn">
         <button className="btn" onClick={handleMarkAsPaid} id={id}>

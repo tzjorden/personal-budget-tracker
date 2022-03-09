@@ -1,5 +1,6 @@
 import React from "react";
 import LineItemIncome from "./LineItemIncome";
+import IncomeForm from "./IncomeForm";
 
 function IncomeTable({ incomes, setIncomes }) {
   const lineItemIncome = incomes.map((income) => {
@@ -8,7 +9,7 @@ function IncomeTable({ incomes, setIncomes }) {
         className="line-item"
         key={income.id}
         description={income.description}
-        amount={income.amount}
+        amount={`$${income.amount.toLocaleString()}`}
         date={income.date}
         notes={income.notes}
         id={income.id}
@@ -18,25 +19,28 @@ function IncomeTable({ incomes, setIncomes }) {
   });
 
   return (
-    <div className="table">
+    <div>
       <h2>Income</h2>
-      <div className="line-item">
-        <div className="line-item-box-btn"></div>
-        <div className="line-item-box">
-          <strong>Description</strong>
+      <div className="table">
+        <div className="line-item">
+          <div className="line-item-box-btn"></div>
+          <div className="line-item-box">
+            <strong>Description</strong>
+          </div>
+          <div className="line-item-box">
+            <strong>Amount</strong>
+          </div>
+          <div className="line-item-box">
+            <strong>Date</strong>
+          </div>
+          <div className="line-item-box">
+            <strong>Notes</strong>
+          </div>
+          <div className="line-item-box-btn"></div>
         </div>
-        <div className="line-item-box">
-          <strong>Amount</strong>
-        </div>
-        <div className="line-item-box">
-          <strong>Date</strong>
-        </div>
-        <div className="line-item-box">
-          <strong>Notes</strong>
-        </div>
-        <div className="line-item-box-btn"></div>
+        {lineItemIncome}
+        <IncomeForm />
       </div>
-      {lineItemIncome}
     </div>
   );
 }

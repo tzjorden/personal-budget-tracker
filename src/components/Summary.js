@@ -14,8 +14,11 @@ function Summary({ incomes, setIncomes, expenses, setExpenses }) {
     let currentYear = date.getFullYear().toString();
     // console.log(date, currentMonth, currentYear);
     if (timeframe === "current-month") {
-      selectedTimeframe = incomes.filter((income) => {
-        income.date.includes(currentMonth) && income.date.includes(currentYear);
+      selectedTimeframe = incomes.map((income) => {
+        if (
+          income.date.includes(currentMonth) &&
+          income.date.includes(currentYear)
+        );
       });
     }
     console.log(selectedTimeframe);
@@ -30,10 +33,10 @@ function Summary({ incomes, setIncomes, expenses, setExpenses }) {
       <select value={timeframe} onChange={handleTimeframe}>
         <option value="current-month">Current month</option>
         <option value="last-month">Last month</option>
-        <option value="90-day">Last 90 days</option>
+        <option value="last-90-days">Last 90 days</option>
         <option value="current-year">Current year</option>
         <option value="last-year">Last year</option>
-        <option value="custom">custom</option>
+        {/* <option value="custom">custom</option> */}
       </select>
       <p>
         <strong>Income: </strong> $100
