@@ -17,29 +17,25 @@ function LineItemExpenses({
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ paid: true }),
+      body: JSON.stringify({ paid: !paid }),
     });
-    setExpenses((currentExpenses) => setExpenses(currentExpenses));
+    setExpenses((currentExpenses) => {
+      console.log(currentExpenses);
+      return currentExpenses.map((expense) => expense);
+    });
   }
 
   function handleDelete(e) {
-    // console.log(e.target.id);
-    // const decision = prompt(
-    //   "Type DELETE if you want to delete this item? \n(This action cannot be undone)"
-    // );
-    // if (decision.toUpperCase() === "DELETE") {
     fetch(`http://localhost:9292/delete_expense/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((resp) => {
-      console.log(resp);
     });
+    // .then((resp) => resp.json());
     setExpenses((currentExpenses) => {
-      currentExpenses.filter((expense) => expense.id !== id);
+      return currentExpenses.filter((expense) => expense.id !== id);
     });
-    // }
   }
 
   function handleEdit(e) {
