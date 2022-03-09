@@ -1,6 +1,10 @@
 import React from "react";
+
+import Tracker from "./Tracker";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Summary from "./Summary";
+
 import Navbar from "./Navbar";
 import ExpenseForm from "./ExpenseForm";
 import IncomeForm from "./IncomeForm";
@@ -10,6 +14,9 @@ function App() {
     <div className="App">
       
       <h1>Personal Budget Tracker</h1>
+
+      <Tracker />
+
       <Router>
         <Navbar />
           <Routes>
@@ -18,6 +25,7 @@ function App() {
             <Route path='/summary' element={<Summary/>} />
           </Routes>
       </Router>
+
     </div>
   );
 }
