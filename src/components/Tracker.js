@@ -5,7 +5,7 @@ import Summary from "./Summary";
 
 function Tracker() {
   const [expenses, setExpenses] = useState([]);
-  const [income, setIncome] = useState([]);
+  const [incomes, setIncomes] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/expenses")
@@ -19,17 +19,22 @@ function Tracker() {
   useEffect(() => {
     fetch("http://localhost:9292/income")
       .then((r) => r.json())
-      .then((income) => {
-        console.log(income);
-        setIncome(income);
+      .then((incomes) => {
+        // console.log(incomes);
+        setIncomes(incomes);
       });
   }, []);
 
   return (
     <div>
       <ExpensesTable expenses={expenses} setExpenses={setExpenses} />
-      <IncomeTable income={income} setIncome={setIncome} />
-      <Summary />
+      <IncomeTable incomes={incomes} setIncomes={setIncomes} />
+      <Summary
+        incomes={incomes}
+        setIncomes={setIncomes}
+        expenses={expenses}
+        setExpenses={setExpenses}
+      />
     </div>
   );
 }
