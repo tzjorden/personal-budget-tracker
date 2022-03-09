@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function LineItemIncome({ description, amount, notes, id, setIncome }) {
+function LineItemIncome({ description, amount, date, notes, id, setIncomes }) {
   // const [remove, setRemove] = useState(false);
 
   function handleDelete(e) {
@@ -17,7 +17,7 @@ function LineItemIncome({ description, amount, notes, id, setIncome }) {
       }).then((resp) => {
         console.log(resp);
       });
-      setIncome((currentIncome) =>
+      setIncomes((currentIncome) =>
         currentIncome.filter((income) => income.id !== id)
       );
     }
@@ -36,6 +36,7 @@ function LineItemIncome({ description, amount, notes, id, setIncome }) {
       </div>
       <div className="line-item-box">{description}</div>
       <div className="line-item-box">{amount}</div>
+      <div className="line-item-box">{date}</div>
       <div className="line-item-box">{notes}</div>
       <div className="line-item-box-btn">
         <button className="btn" onClick={handleDelete} id={id}>
