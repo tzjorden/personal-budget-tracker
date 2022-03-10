@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LineItemIncome from "./LineItemIncome";
 import IncomeForm from "./IncomeForm";
 import { v4 as uuidv4 } from "uuid";
 
-function IncomeTable({ incomes, setIncomes }) {
+function IncomeTable() {
+  const [incomes, setIncomes] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/incomes")
+      .then((r) => r.json())
+      .then((incomes) => {
+        // console.log(incomes);
+        setIncomes(incomes);
+      });
+  }, []);
+
   const lineItemIncome = incomes.map((income) => {
     return (
       <LineItemIncome

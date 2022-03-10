@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Summary({ incomes, setIncomes, expenses, setExpenses }) {
+function Summary() {
   const [timeframe, setTimeframe] = useState("select-timeframe");
   const [displayExpensesSummary, setDisplayExpensesSummary] = useState("");
   const [displayIncomesSummary, setDisplayIncomesSummary] = useState("");

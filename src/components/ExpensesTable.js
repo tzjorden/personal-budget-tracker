@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LineItemExpenses from "./LineItemExpenses";
 import ExpenseForm from "./ExpenseForm";
 import { v4 as uuidv4 } from "uuid";
 
-function ExpensesTable({ expenses, setExpenses }) {
+function ExpensesTable() {
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/expenses")
+      .then((r) => r.json())
+      .then((expenses) => {
+        // console.log(expenses);
+        setExpenses(expenses);
+      });
+  }, []);
+
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
