@@ -1,34 +1,38 @@
 import React, { useState } from "react";
 
 function IncomeForm({ incomes, setIncomes }) {
+  let today = new Date().toISOString().slice(0, 10);
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState();
   const [notes, setNotes] = useState("");
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
 
-    const newIncome = { description, date, amount, notes };
+    const newIncome = {
+      description,
+      date,
+      amount,
+      notes,
+    };
 
     fetch("http://localhost:9292/add_income", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify(newIncome),
     });
     setIncomes([...incomes, newIncome]);
     e.target.reset();
-  };
-
-  // setExpenses((currentExpenses) => {
-  //   return currentExpenses.map((expense) =>
-  //     expense.id == id ? resp : expense
-  //   );
-  // });
+  }
 
   return (
     <div className="new-income-form">
       <h3>Add Income</h3>
+<<<<<<< HEAD
       <form onSubmit={handleSubmit} className="form-container">
         <input className = "form-border"
           onChange={(e) => setDescription(e.target.value)}
@@ -53,15 +57,47 @@ function IncomeForm({ incomes, setIncomes }) {
         <label>
           Date
           <input className = "form-border"
-            onChange={(e) => setDate(e.target.value)}
-            type="date"
-            name="date"
-            step="0.01"
-            placeholder="Due Date"
+=======
+
+      <form onSubmit={handleSubmit}>
+        <label>
+          Amount:{" "}
+          <input
+            required
+            onChange={(e) => setAmount(e.target.value)}
+            value={amount}
+            type="number"
+            name="amount"
+            placeholder="Amount..."
           />
         </label>
+        <input
+          onChange={(e) => setDescription(e.target.value)}
+          type="text"
+          name="description"
+          placeholder="Description..."
+        />
         <br />
-        <button className="btn-submit" type="submit">
+        <label>
+          Date:{" "}
+          <input
+            required
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
+            onChange={(e) => setDate(e.target.value)}
+            value={date}
+            type="date"
+            name="date"
+          />
+        </label>
+        <input
+          onChange={(e) => setNotes(e.target.value)}
+          value={notes}
+          type="text"
+          name="notes"
+          placeholder="Notes..."
+        />
+        <br />
+        <button className="btn-submit" type="submit" value="Submit">
           Add Income
         </button>
       </form>

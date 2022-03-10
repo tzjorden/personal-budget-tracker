@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ExpensesTable from "./ExpensesTable";
 import IncomeTable from "./IncomeTable";
 import Summary from "./Summary";
 
 function Tracker() {
+<<<<<<< HEAD
   const [expenses, setExpenses] = useState([]);
   const [incomes, setIncomes] = useState([]);
 
@@ -26,16 +27,13 @@ function Tracker() {
       });
   }, []);
 
+=======
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
   return (
     <div>
-      <ExpensesTable expenses={expenses} setExpenses={setExpenses} />
-      <IncomeTable incomes={incomes} setIncomes={setIncomes} />
-      <Summary
-        incomes={incomes}
-        setIncomes={setIncomes}
-        expenses={expenses}
-        setExpenses={setExpenses}
-      />
+      <ExpensesTable />
+      <IncomeTable />
+      <Summary />
     </div>
   );
 }

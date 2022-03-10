@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Summary({ incomes, setIncomes, expenses, setExpenses }) {
+function Summary() {
   const [timeframe, setTimeframe] = useState("select-timeframe");
   const [displayExpensesSummary, setDisplayExpensesSummary] = useState("");
   const [displayIncomesSummary, setDisplayIncomesSummary] = useState("");
@@ -42,7 +42,8 @@ function Summary({ incomes, setIncomes, expenses, setExpenses }) {
         <strong>Expenses: </strong> ${displayExpensesSummary.toLocaleString()}
       </p>
       <p>
-        <strong>Outstanding bills (unpaid): </strong>FILL IN
+        <strong>Disposable Income: </strong>$
+        {(displayIncomesSummary - displayExpensesSummary).toLocaleString()}
       </p>
     </div>
   );

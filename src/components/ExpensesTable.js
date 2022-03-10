@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LineItemExpenses from "./LineItemExpenses";
 import ExpenseForm from "./ExpenseForm";
+import { v4 as uuidv4 } from "uuid";
 
-function ExpensesTable({ expenses, setExpenses }) {
+function ExpensesTable() {
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/expenses")
+      .then((r) => r.json())
+      .then((expenses) => {
+        // console.log(expenses);
+        setExpenses(expenses);
+      });
+  }, []);
+
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
+<<<<<<< HEAD
         // key={uuidv4()}
         key={expense.id}
+=======
+        key={uuidv4()}
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
         description={expense.description}
         cost={`$${expense.cost}`}
         date={expense.date}
@@ -49,7 +65,11 @@ function ExpensesTable({ expenses, setExpenses }) {
           <div className="line-item-box-header">
             <strong>Paid</strong>
           </div>
+<<<<<<< HEAD
           <div className="line-item-box-header">
+=======
+          <div className="line-item-box-btn">
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
             <strong>Status</strong>
           </div>
         </div>
