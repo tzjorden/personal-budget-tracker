@@ -18,7 +18,12 @@ function ExpensesTable() {
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
+<<<<<<< HEAD
+        // key={uuidv4()}
+        key={expense.id}
+=======
         key={uuidv4()}
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
         description={expense.description}
         cost={`$${expense.cost}`}
         date={expense.date}
@@ -48,35 +53,41 @@ function ExpensesTable() {
       </div>
 
       <div className="table">
-        <div className="line-item">
+        <div className="line-item-header">
           {/* <div className="line-item-box-btn"></div> */}
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Description</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Cost</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Date</strong>
           </div>
 
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Frequency</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Due Date</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Notes</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Paid</strong>
           </div>
+<<<<<<< HEAD
+          <div className="line-item-box-header">
+=======
           <div className="line-item-box-btn">
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
             <strong>Status</strong>
           </div>
         </div>
-        {lineItemExpenses}
+        <div className = "list-table">
+          {lineItemExpenses}
+        </div>
         <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
       </div>
     </div>

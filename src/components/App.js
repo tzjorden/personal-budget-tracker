@@ -14,6 +14,9 @@ function App() {
       <Tracker />
 
       <Routes>
+        {/* <Route path="/income" element={<IncomeTable />} />
+        <Route path="/expenses" element={<ExpensesTable />} />
+        <Route path="/summary" element={<Summary />} /> */}
         <Route path="/income" element={<IncomeTable />} />
         <Route path="/expenses" element={<ExpensesTable />} />
         <Route path="/summary" element={<Summary />} />
