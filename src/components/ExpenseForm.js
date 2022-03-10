@@ -53,6 +53,7 @@ function ExpenseForm({ expenses, setExpenses }) {
           placeholder="Description"
         />
         <input
+          required
           className="form-border"
           onChange={(e) => setCost(e.target.value)}
           type="number"
@@ -77,6 +78,7 @@ function ExpenseForm({ expenses, setExpenses }) {
         <label>
           Date of expense:{" "}
           <input
+            required
             className="form-border"
             onChange={(e) => setDate(e.target.value)}
             value={date}
@@ -85,8 +87,7 @@ function ExpenseForm({ expenses, setExpenses }) {
           />
         </label>
         <label>
-          {" "}
-          Payment due date:
+          Payment due date:{" "}
           <input
             className="form-border"
             onChange={(e) => setDueDate(e.target.value)}

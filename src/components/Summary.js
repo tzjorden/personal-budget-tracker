@@ -25,7 +25,11 @@ function Summary() {
   return (
     <div>
       <h2>Your Financial Summary:</h2>
-      <select value={timeframe} onChange={handleTimeframe} className = "form-border">
+      <select
+        value={timeframe}
+        onChange={handleTimeframe}
+        className="form-border"
+      >
         <option value="select-timeframe">Select Timeframe</option>
         <option value="current-month">Current month</option>
         <option value="last-month">Last month</option>
@@ -40,6 +44,7 @@ function Summary() {
       <p>
         <strong>Expenses: </strong> ${displayExpensesSummary.toLocaleString()}
       </p>
+      {/* <p><strong>Unpaid bills: </strong></p> */}
       <p>
         <strong>Disposable Income: </strong>$
         {(displayIncomesSummary - displayExpensesSummary).toLocaleString()}

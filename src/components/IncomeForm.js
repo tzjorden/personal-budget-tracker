@@ -41,6 +41,7 @@ function IncomeForm({ incomes, setIncomes }) {
           placeholder="Description"
         />
         <input
+          required
           className="form-border"
           onChange={(e) => setAmount(e.target.value)}
           type="number"
@@ -59,6 +60,7 @@ function IncomeForm({ incomes, setIncomes }) {
         <label>
           Date
           <input
+            required
             className="form-border"
             onChange={(e) => setDate(e.target.value)}
             value={date}
