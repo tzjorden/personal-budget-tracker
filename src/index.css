@@ -79,18 +79,20 @@ html {
 }
 
 input {
-  width: 15%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  width: 20%;
+  padding: 10px;
+  margin: 5px 0 1vh 0;
   border: solid;
   background: #efefef;
 }
 
-button {
-  background-color: rgb(8, 8, 8);
-  padding: 0.35em 1.2em;
+.btn-submit {
+  background-color: rgb(7 198 24);
+  color: white;
+  padding: 0.5em 1.2em;
   border: 0.1em solid #ffffff;
   margin: 0 0.3em 0.3em 0;
+  margin-top: 1em;
   display: inline-block;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -100,7 +102,7 @@ button {
   transition: all 0.2s;
 }
 
-button:hover {
+.btn-submit:hover {
   /* color: #000000; */
-  background-color: #fff6f6;
+  background-color: rgb(5, 170, 18);
 }

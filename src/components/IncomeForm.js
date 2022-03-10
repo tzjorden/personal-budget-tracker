@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function IncomeForm() {
+function IncomeForm({ incomes, setIncomes }) {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [amount, setAmount] = useState("");
@@ -16,11 +16,19 @@ function IncomeForm() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newIncome),
     });
+    setIncomes([...incomes, newIncome]);
+    e.target.reset();
   };
+
+  // setExpenses((currentExpenses) => {
+  //   return currentExpenses.map((expense) =>
+  //     expense.id == id ? resp : expense
+  //   );
+  // });
 
   return (
     <div className="new-income-form">
-      <h2>Add Income</h2>
+      <h3>Add Income</h3>
 
       <form onSubmit={handleSubmit} className="form-container">
         <input
@@ -35,20 +43,28 @@ function IncomeForm() {
           name="amount"
           placeholder="Amount"
         />
+
         <input
           onChange={(e) => setNotes(e.target.value)}
           type="text"
           name="notes"
           placeholder="Notes"
         />
-        <input
-          onChange={(e) => setDate(e.target.value)}
-          type="date"
-          name="date"
-          step="0.01"
-          placeholder="Due Date"
-        />
-        <button type="submit">Add Income</button>
+        <br />
+        <label>
+          Date
+          <input
+            onChange={(e) => setDate(e.target.value)}
+            type="date"
+            name="date"
+            step="0.01"
+            placeholder="Due Date"
+          />
+        </label>
+        <br />
+        <button className="btn-submit" type="submit">
+          Add Income
+        </button>
       </form>
     </div>
   );

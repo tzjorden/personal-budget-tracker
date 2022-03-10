@@ -3,7 +3,6 @@ import LineItemExpenses from "./LineItemExpenses";
 import ExpenseForm from "./ExpenseForm";
 
 function ExpensesTable({ expenses, setExpenses }) {
-  // console.log(expenses);
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
@@ -44,17 +43,17 @@ function ExpensesTable({ expenses, setExpenses }) {
             <strong>Due Date</strong>
           </div>
           <div className="line-item-box">
-            <strong>Paid</strong>
+            <strong>Notes</strong>
           </div>
           <div className="line-item-box">
-            <strong>Notes</strong>
+            <strong>Paid</strong>
           </div>
           <div className="line-item-box-btn">
             <strong>Remove</strong>
           </div>
         </div>
         {lineItemExpenses}
-        <ExpenseForm />
+        <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ function IncomeTable({ incomes, setIncomes }) {
         className="line-item"
         key={income.id}
         description={income.description}
-        amount={`$${income.amount.toLocaleString()}`}
+        amount={`$${income.amount}`}
         date={income.date}
         notes={income.notes}
         id={income.id}
@@ -39,7 +39,7 @@ function IncomeTable({ incomes, setIncomes }) {
           <div className="line-item-box-btn"></div>
         </div>
         {lineItemIncome}
-        <IncomeForm />
+        <IncomeForm incomes={incomes} setIncomes={setIncomes} />
       </div>
     </div>
   );
