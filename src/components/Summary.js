@@ -1,30 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Summary({ incomes, setIncomes, expenses, setExpenses }) {
   const [timeframe, setTimeframe] = useState("current-month");
+  const [displayTimeframe, setDisplayTimeframe] = useState("");
 
   function handleTimeframe(e) {
     setTimeframe(e.target.value);
-  }
-
-  const displaySummary = function () {
-    let selectedTimeframe = null;
-    let date = new Date();
-    let currentMonth = date.getMonth().toString();
-    let currentYear = date.getFullYear().toString();
-    // console.log(date, currentMonth, currentYear);
-    if (timeframe === "current-month") {
-      selectedTimeframe = incomes.map((income) => {
-        if (
-          income.date.includes(currentMonth) &&
-          income.date.includes(currentYear)
-        );
+    fetch(`http://localhost:9292/expense_summary/${e.target.value}`)
+      .then((r) => r.json())
+      .then((displayTimeframe) => {
+        console.log(displayTimeframe);
+        setDisplayTimeframe(displayTimeframe);
       });
-    }
-    console.log(selectedTimeframe);
-  };
-
-  displaySummary();
+  }
 
   return (
     <div>
@@ -39,10 +27,10 @@ function Summary({ incomes, setIncomes, expenses, setExpenses }) {
         {/* <option value="custom">custom</option> */}
       </select>
       <p>
-        <strong>Income: </strong> $100
+        <strong>Income: </strong>$100
       </p>
       <p>
-        <strong>Expenses: </strong> $1000
+        <strong>Expenses: </strong> ${displayTimeframe.toLocaleString()}
       </p>
       <p>
         <strong>Outstanding bills (unpaid): </strong>$750

@@ -3,7 +3,7 @@ import LineItemExpenses from "./LineItemExpenses";
 import ExpenseForm from "./ExpenseForm";
 
 function ExpensesTable({ expenses, setExpenses }) {
-  console.log(expenses);
+  // console.log(expenses);
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses

@@ -12,7 +12,7 @@ function Tracker() {
     fetch("http://localhost:9292/expenses")
       .then((r) => r.json())
       .then((expenses) => {
-        console.log(expenses);
+        // console.log(expenses);
         setExpenses(expenses);
       });
   }, []);

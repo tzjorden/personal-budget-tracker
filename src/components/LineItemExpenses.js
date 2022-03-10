@@ -12,16 +12,22 @@ function LineItemExpenses({
   setExpenses,
 }) {
   function handleMarkAsPaid(e) {
-    fetch(`http://localhost:9292/update_expense/${id}`, {
+    fetch(`http://localhost:9292/update_expenses/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ paid: !paid }),
-    });
-    setExpenses((currentExpenses) => {
-      return currentExpenses.filter((expense) => expense);
-    });
+    })
+      .then((resp) => resp.json())
+      .then((resp) => {
+        console.log(resp);
+        setExpenses((currentExpenses) => {
+          return currentExpenses.map((expense) =>
+            expense.id == id ? resp : expense
+          );
+        });
+      });
   }
 
   function handleDelete(e) {
