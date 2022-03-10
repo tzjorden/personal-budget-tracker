@@ -35,6 +35,18 @@ function ExpensesTable() {
   return (
     <div>
       <h2>Expenses</h2>
+      <div>
+        <select value={null} onChange={null}>
+          <option value="select-timeframe">Select Timeframe</option>
+          <option value="current-month">Current month</option>
+          <option value="last-month">Last month</option>
+          <option value="last-90-days">Last 90 days</option>
+          <option value="current-year">Current year</option>
+          <option value="last-year">Last year</option>
+          <option value="all-time">All time</option>
+        </select>
+      </div>
+
       <div className="table">
         <div className="line-item">
           {/* <div className="line-item-box-btn"></div> */}

@@ -33,7 +33,6 @@ function Summary() {
         <option value="current-year">Current year</option>
         <option value="last-year">Last year</option>
         <option value="all-time">All time</option>
-        {/* <option value="custom">custom</option> */}
       </select>
       <p>
         <strong>Income: </strong>${displayIncomesSummary.toLocaleString()}
