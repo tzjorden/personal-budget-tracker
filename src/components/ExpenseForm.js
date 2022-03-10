@@ -36,25 +36,25 @@ function ExpenseForm({ expenses, setExpenses }) {
       <h3>Add Expense</h3>
 
       <form onSubmit={handleSubmit}>
-        <input
+        <input className = "form-border"
           onChange={(e) => setDescription(e.target.value)}
           type="text"
           name="description"
           placeholder="Description"
         />
-        <input
+        <input className = "form-border"
           onChange={(e) => setCost(e.target.value)}
           type="number"
           name="cost"
           placeholder="Cost"
         />
-        <input
+        <input className = "form-border"
           onChange={(e) => setFrequency(e.target.value)}
           type="text"
           name="frequency"
           placeholder="Frequency"
         />
-        <input
+        <input className = "form-border"
           onChange={(e) => setNotes(e.target.value)}
           type="text"
           name="notes"
@@ -63,7 +63,7 @@ function ExpenseForm({ expenses, setExpenses }) {
         <label>
           <br />
           Date of expense:{" "}
-          <input
+          <input className = "form-border"
             onChange={(e) => setDate(e.target.value)}
             type="date"
             name="date"
@@ -74,7 +74,7 @@ function ExpenseForm({ expenses, setExpenses }) {
         <label>
           {" "}
           Payment due date:
-          <input
+          <input className = "form-border"
             onChange={(e) => setDueDate(e.target.value)}
             type="date"
             name="dueDate"

@@ -18,7 +18,7 @@ function Tracker() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:9292/incomes")
+    fetch("http://localhost:9292/income")
       .then((r) => r.json())
       .then((incomes) => {
         // console.log(incomes);

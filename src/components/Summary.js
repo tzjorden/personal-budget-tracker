@@ -25,7 +25,7 @@ function Summary({ incomes, setIncomes, expenses, setExpenses }) {
   return (
     <div>
       <h2>Your Financial Summary:</h2>
-      <select value={timeframe} onChange={handleTimeframe}>
+      <select value={timeframe} onChange={handleTimeframe} className = "form-border">
         <option value="select-timeframe">Select Timeframe</option>
         <option value="current-month">Current month</option>
         <option value="last-month">Last month</option>

@@ -6,6 +6,7 @@ function ExpensesTable({ expenses, setExpenses }) {
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
+        // key={uuidv4()}
         key={expense.id}
         description={expense.description}
         cost={`$${expense.cost}`}
@@ -24,35 +25,37 @@ function ExpensesTable({ expenses, setExpenses }) {
     <div>
       <h2>Expenses</h2>
       <div className="table">
-        <div className="line-item">
+        <div className="line-item-header">
           {/* <div className="line-item-box-btn"></div> */}
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Description</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Cost</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Date</strong>
           </div>
 
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Frequency</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Due Date</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Notes</strong>
           </div>
-          <div className="line-item-box">
+          <div className="line-item-box-header">
             <strong>Paid</strong>
           </div>
-          <div className="line-item-box-btn">
-            <strong>Mark paid</strong>
+          <div className="line-item-box-header">
+            <strong>Status</strong>
           </div>
         </div>
-        {lineItemExpenses}
+        <div className = "list-table">
+          {lineItemExpenses}
+        </div>
         <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
       </div>
     </div>
