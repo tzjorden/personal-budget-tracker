@@ -32,6 +32,32 @@ function IncomeForm({ incomes, setIncomes }) {
   return (
     <div className="new-income-form">
       <h3>Add Income</h3>
+<<<<<<< HEAD
+      <form onSubmit={handleSubmit} className="form-container">
+        <input className = "form-border"
+          onChange={(e) => setDescription(e.target.value)}
+          type="text"
+          name="description"
+          placeholder="Description"
+        />
+        <input className = "form-border"
+          onChange={(e) => setAmount(e.target.value)}
+          type="number"
+          name="amount"
+          placeholder="Amount"
+        />
+
+        <input className = "form-border"
+          onChange={(e) => setNotes(e.target.value)}
+          type="text"
+          name="notes"
+          placeholder="Notes"
+        />
+        <br />
+        <label>
+          Date
+          <input className = "form-border"
+=======
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -56,6 +82,7 @@ function IncomeForm({ incomes, setIncomes }) {
           Date:{" "}
           <input
             required
+>>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
             onChange={(e) => setDate(e.target.value)}
             value={date}
             type="date"

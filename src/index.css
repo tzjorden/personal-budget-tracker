@@ -3,6 +3,7 @@ html {
   padding: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
+  background-color: rgb(250, 241, 229);
 }
 
 .nav-bar {
@@ -42,22 +43,43 @@ html {
   margin: auto;
 }
 
+.line-item-header {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: center;
+  height: auto;
+  width: min-content;
+  border: 3px solid;
+}
+
 .line-item {
   display: flex;
   flex-direction: row;
-  /* width: fit-content; */
+  width: fit-content;
   justify-content: center;
   height: auto;
-  width: auto;
+  width: max-content;
 }
 
-.line-item-box {
+.line-item-box-header {
   display: flex;
-  border: 1px solid gray;
+  border: none;
   padding: 0.2em;
   align-items: center;
   width: 100px;
   justify-content: center;
+  background-color: rgb(252, 252, 252);
+}
+
+.line-item-box {
+  display: flex;
+  border:solid;
+  padding: 0.2em;
+  align-items: center;
+  width: 100px;
+  justify-content: center;
+  background-color: rgb(252, 252, 252);
 }
 
 .line-item-box-btn {
@@ -65,6 +87,7 @@ html {
   border: 1px solid gray;
   padding: 0.2em;
   width: auto;
+  background-color: rgb(252, 252, 252);
   /* padding: 0.3em; */
 }
 
@@ -108,3 +131,22 @@ select {
   /* color: #000000; */
   background-color: rgb(5, 170, 18);
 }
+
+h1 {
+  background-color: rgb(250, 241, 229);
+}
+
+.list-table{
+  border: 10px double;
+}
+
+.form-border{
+  border: 3px solid;
+  background-color: white;
+}
+
+
+
+/* p {
+  background-color: rgb(252, 252, 252);
+} */
