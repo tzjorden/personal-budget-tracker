@@ -74,7 +74,7 @@ html {
 
 .line-item-box {
   display: flex;
-  border:solid;
+  border: solid black 2px;
   padding: 0.2em;
   align-items: center;
   width: 100px;
@@ -84,7 +84,7 @@ html {
 
 .line-item-box-btn {
   display: flex;
-  border: 1px solid gray;
+  border: 2px solid black;
   padding: 0.2em;
   width: auto;
   background-color: rgb(252, 252, 252);
@@ -136,16 +136,14 @@ h1 {
   background-color: rgb(250, 241, 229);
 }
 
-.list-table{
+.list-table {
   border: 10px double;
 }
 
-.form-border{
+.form-border {
   border: 3px solid;
   background-color: white;
 }
-
-
 
 /* p {
   background-color: rgb(252, 252, 252);

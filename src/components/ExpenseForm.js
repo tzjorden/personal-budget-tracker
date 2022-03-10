@@ -44,56 +44,30 @@ function ExpenseForm({ expenses, setExpenses }) {
       <h3>Add Expense</h3>
 
       <form onSubmit={handleSubmit}>
-<<<<<<< HEAD
-        <input className = "form-border"
-=======
-        <label>
-          Cost:{" "}
-          <input
-            required
-            onChange={(e) => setCost(e.target.value)}
-            value={cost}
-            type="number"
-            name="cost"
-            placeholder="Cost"
-          />
-        </label>
         <input
->>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
+          className="form-border"
           onChange={(e) => setDescription(e.target.value)}
           value={description}
           type="text"
           name="description"
-<<<<<<< HEAD
           placeholder="Description"
         />
-        <input className = "form-border"
+        <input
+          className="form-border"
           onChange={(e) => setCost(e.target.value)}
           type="number"
           name="cost"
           placeholder="Cost"
         />
-        <input className = "form-border"
+        <input
+          className="form-border"
           onChange={(e) => setFrequency(e.target.value)}
           type="text"
           name="frequency"
           placeholder="Frequency"
         />
-        <input className = "form-border"
-=======
-          placeholder="Description..."
-        />
-        <br />
-        <label>
-          Frequency{" "}
-          <select value={frequency} onChange={handleFrequency}>
-            <option value="one-time">One-time</option>
-            <option value="monthly">Monthly</option>
-            <option value="annual">Annual</option>
-          </select>
-        </label>
         <input
->>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
+          className="form-border"
           onChange={(e) => setNotes(e.target.value)}
           type="text"
           name="notes"
@@ -102,12 +76,8 @@ function ExpenseForm({ expenses, setExpenses }) {
         <br />
         <label>
           Date of expense:{" "}
-<<<<<<< HEAD
-          <input className = "form-border"
-=======
           <input
-            required
->>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
+            className="form-border"
             onChange={(e) => setDate(e.target.value)}
             value={date}
             type="date"
@@ -115,14 +85,10 @@ function ExpenseForm({ expenses, setExpenses }) {
           />
         </label>
         <label>
-<<<<<<< HEAD
           {" "}
           Payment due date:
-          <input className = "form-border"
-=======
-          Payment due date:{" "}
           <input
->>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
+            className="form-border"
             onChange={(e) => setDueDate(e.target.value)}
             value={dueDate}
             type="date"

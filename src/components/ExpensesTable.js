@@ -18,12 +18,8 @@ function ExpensesTable() {
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
-<<<<<<< HEAD
         // key={uuidv4()}
         key={expense.id}
-=======
-        key={uuidv4()}
->>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
         description={expense.description}
         cost={`$${expense.cost}`}
         date={expense.date}
@@ -77,11 +73,7 @@ function ExpensesTable() {
           <div className="line-item-box-header">
             <strong>Paid</strong>
           </div>
-<<<<<<< HEAD
           <div className="line-item-box-header">
-=======
-          <div className="line-item-box-btn">
->>>>>>> 16a9af2175836b86c9643b5e6bbdcc2bceec3ce8
             <strong>Status</strong>
           </div>
         </div>
