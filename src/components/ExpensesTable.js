@@ -1,12 +1,13 @@
 import React from "react";
 import LineItemExpenses from "./LineItemExpenses";
 import ExpenseForm from "./ExpenseForm";
+import { v4 as uuidv4 } from "uuid";
 
 function ExpensesTable({ expenses, setExpenses }) {
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
-        key={expense.id}
+        key={uuidv4()}
         description={expense.description}
         cost={`$${expense.cost}`}
         date={expense.date}
@@ -49,7 +50,7 @@ function ExpensesTable({ expenses, setExpenses }) {
             <strong>Paid</strong>
           </div>
           <div className="line-item-box-btn">
-            <strong>Mark paid</strong>
+            <strong>Status</strong>
           </div>
         </div>
         {lineItemExpenses}

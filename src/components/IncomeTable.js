@@ -1,13 +1,14 @@
 import React from "react";
 import LineItemIncome from "./LineItemIncome";
 import IncomeForm from "./IncomeForm";
+import { v4 as uuidv4 } from "uuid";
 
 function IncomeTable({ incomes, setIncomes }) {
   const lineItemIncome = incomes.map((income) => {
     return (
       <LineItemIncome
         className="line-item"
-        key={income.id}
+        key={uuidv4()}
         description={income.description}
         amount={`$${income.amount}`}
         date={income.date}

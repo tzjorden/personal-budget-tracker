@@ -4,11 +4,7 @@ function LineItemIncome({ description, amount, date, notes, id, setIncomes }) {
   // const [remove, setRemove] = useState(false);
 
   function handleDelete(e) {
-    // const decision = prompt(
-    //   "Type DELETE if you want to delete this item? \n(This action cannot be undone)"
-    // );
-    // if (decision.toUpperCase() === "DELETE") {
-    fetch(`http://localhost:9292/delete_income/${id}`, {
+    fetch(`http://localhost:9292/delete_incomes/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +15,6 @@ function LineItemIncome({ description, amount, date, notes, id, setIncomes }) {
     setIncomes((currentIncome) =>
       currentIncome.filter((income) => income.id !== id)
     );
-    // }
   }
 
   function handleEdit(e) {
@@ -39,7 +34,7 @@ function LineItemIncome({ description, amount, date, notes, id, setIncomes }) {
       <div className="line-item-box">{notes}</div>
       <div className="line-item-box-btn">
         <button className="btn" onClick={handleDelete} id={id}>
-          🅇
+          🗑
         </button>
       </div>
     </div>

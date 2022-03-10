@@ -42,7 +42,8 @@ function Summary({ incomes, setIncomes, expenses, setExpenses }) {
         <strong>Expenses: </strong> ${displayExpensesSummary.toLocaleString()}
       </p>
       <p>
-        <strong>Outstanding bills (unpaid): </strong>FILL IN
+        <strong>Disposable Income: </strong>$
+        {(displayIncomesSummary - displayExpensesSummary).toLocaleString()}
       </p>
     </div>
   );
