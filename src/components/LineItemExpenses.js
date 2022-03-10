@@ -49,11 +49,11 @@ function LineItemExpenses({
 
   return (
     <div className="line-item">
-      <div className="line-item-box-btn">
+      {/* <div className="line-item-box-btn">
         <button className="btn" onClick={null} value={id}>
           ✎
         </button>
-      </div>
+      </div> */}
       <div className="line-item-box">{description}</div>
       <div className="line-item-box">{cost}</div>
       <div className="line-item-box">{date}</div>

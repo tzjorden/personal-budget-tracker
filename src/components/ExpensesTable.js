@@ -25,7 +25,7 @@ function ExpensesTable({ expenses, setExpenses }) {
       <h2>Expenses</h2>
       <div className="table">
         <div className="line-item">
-          <div className="line-item-box-btn"></div>
+          {/* <div className="line-item-box-btn"></div> */}
           <div className="line-item-box">
             <strong>Description</strong>
           </div>
@@ -49,7 +49,7 @@ function ExpensesTable({ expenses, setExpenses }) {
             <strong>Paid</strong>
           </div>
           <div className="line-item-box-btn">
-            <strong>Remove</strong>
+            <strong>Mark paid</strong>
           </div>
         </div>
         {lineItemExpenses}

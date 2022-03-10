@@ -28,11 +28,11 @@ function LineItemIncome({ description, amount, date, notes, id, setIncomes }) {
 
   return (
     <div className="line-item">
-      <div className="line-item-box-btn">
+      {/* <div className="line-item-box-btn">
         <button className="btn" onClick={handleEdit} value={id}>
           ✎
         </button>
-      </div>
+      </div> */}
       <div className="line-item-box">{description}</div>
       <div className="line-item-box">{amount}</div>
       <div className="line-item-box">{date}</div>

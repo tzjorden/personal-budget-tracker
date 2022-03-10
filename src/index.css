@@ -38,7 +38,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 100%;
+  margin: auto;
 }
 
 .line-item {
@@ -63,7 +64,7 @@ html {
   display: flex;
   border: 1px solid gray;
   padding: 0.2em;
-  width: 5%;
+  width: auto;
   /* padding: 0.3em; */
 }
 

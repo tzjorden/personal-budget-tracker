@@ -23,7 +23,7 @@ function IncomeTable({ incomes, setIncomes }) {
       <h2>Income</h2>
       <div className="table">
         <div className="line-item">
-          <div className="line-item-box-btn"></div>
+          {/* <div className="line-item-box-btn"></div> */}
           <div className="line-item-box">
             <strong>Description</strong>
           </div>
@@ -36,7 +36,6 @@ function IncomeTable({ incomes, setIncomes }) {
           <div className="line-item-box">
             <strong>Notes</strong>
           </div>
-          <div className="line-item-box-btn"></div>
         </div>
         {lineItemIncome}
         <IncomeForm incomes={incomes} setIncomes={setIncomes} />
