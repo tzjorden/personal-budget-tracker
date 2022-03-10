@@ -22,7 +22,7 @@ function ExpenseForm({ expenses, setExpenses }) {
       paid,
     };
 
-    fetch("http://localhost:9292/add_expense", {
+    fetch("http://localhost:9292/add_expenses", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newExpense),

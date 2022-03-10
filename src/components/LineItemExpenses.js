@@ -12,7 +12,7 @@ function LineItemExpenses({
   setExpenses,
 }) {
   function handleMarkAsPaid(e) {
-    fetch(`http://localhost:9292/update_expenses/${id}`, {
+    fetch(`http://localhost:9292/update_expense/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

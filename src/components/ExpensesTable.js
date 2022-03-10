@@ -8,7 +8,7 @@ function ExpensesTable({ expenses, setExpenses }) {
       <LineItemExpenses
         key={expense.id}
         description={expense.description}
-        cost={`$${expense.cost.toLocaleString()}`}
+        cost={`$${expense.cost}`}
         date={expense.date}
         frequency={expense.frequency}
         dueDate={expense.due_date}

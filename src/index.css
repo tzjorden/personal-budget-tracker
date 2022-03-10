@@ -80,9 +80,9 @@ html {
 }
 
 input {
-  width: 20%;
+  width: auto;
   padding: 10px;
-  margin: 5px 0 1vh 0;
+  margin: 0.5em 0.5em 1em 0;
   border: solid;
   background: #efefef;
 }
