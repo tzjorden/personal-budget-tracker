@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from "uuid";
 
 function ExpensesTable() {
   const [expenses, setExpenses] = useState([]);
-  const [timeFrame, setTimeframe] = useState("filter");
 
   useEffect(() => {
     fetch("http://localhost:9292/expenses")
@@ -16,15 +15,10 @@ function ExpensesTable() {
       });
   }, []);
 
-  function handleTimeframe(e) {
-    setTimeframe(e.target.value);
-  }
-
   const lineItemExpenses = expenses.map((expense) => {
     return (
       <LineItemExpenses
         key={uuidv4()}
-        // key={expense.id}
         description={expense.description}
         cost={`$${expense.cost}`}
         date={expense.date}
@@ -72,23 +66,6 @@ function ExpensesTable() {
           </div>
         </div>
         <div className="list-table">{lineItemExpenses}</div>
-
-        {/* <div>
-          <select
-            className="filter-select"
-            value={timeFrame}
-            onChange={handleTimeframe}
-          >
-            <option value="filter">Filter</option>
-            <option value="current-month">Current month</option>
-            <option value="last-month">Last month</option>
-            <option value="last-90-days">Last 90 days</option>
-            <option value="current-year">Current year</option>
-            <option value="last-year">Last year</option>
-            <option value="all-time">All time</option>
-          </select>
-        </div>
-         */}
 
         <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
       </div>
