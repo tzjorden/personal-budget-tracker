@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Project Title:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Personal Budget Tracker"
 
-## Available Scripts
+# Project Description:
 
-In the project directory, you can run:
+This repository contains the frontend, which was originally intended to be used with the api in this repo: https://github.com/personnamedmike/phase-3-sinatra-react-project.
 
-### `npm start`
+This project was for "phase 3" of Flatiron School school's Software Engineering bootcamp. We had 4 days to complete a fullstack app. The assignment was to play around with Active Record, Sinatra, Ruby, and connect it with a React frontend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In a sense, this project was a second iteration of tzjorden's and my app, "Unrekt Crypto Tracker." https://github.com/personnamedmike/unrekt-crypto-tracker. The key differences were that we wrote cleaner code this time, and implemented our own backend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This first iteration of Personal Budget Tracker is less buggy than Unrekt Crypto Tracker, and is useful enough to use in your everyday life.
 
-### `npm test`
+# How to Install and Run Personal Budget Tracker
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Currently the best and most secure way to run this project is by forking and cloning both repositories. This repo you're currently in is for the api, and you can fork the frontend here https://personnamedmike.github.io/personal-budget-tracker/.
 
-### `npm run build`
+Running this app on your local machine and storing data on a local sqlite3 database will ensure a base level of privacy of your financial transactions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# How to use this project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Setup:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Head over to this repo and follow the instructtions in that README.md file first: https://github.com/personnamedmike/phase-3-sinatra-react-project.
+2. After your server is up and running, fork and clone this repo.
+3. Navigate into the project directly, and run the following commands:
+   % npm install && npm start
 
-### `npm run eject`
+Add an expense: navigate to the Expenses route, add details about your expense, click 'Add Expense'. This can also be done on the home page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Add income: navigate to the Income route, add details about income, click "Add Income". This can also be done on the home page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To delete an entry, click on the garbage can icon at the end of its line.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To mark an expense as paid, click on the 🅇 icon. If a line item is marked with the ✅ icon, that means it's been paid off.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To view a basic summary of your finances, visit the Summary tab. This shows a sum of your income, expenses, and the difference between a sum of both
 
-## Learn More
+# Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Other collaborators on this product:
+TzJorden: https://github.com/tzjorden
+JoshHayles: https://github.com/JoshHayles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+--
 
-### Code Splitting
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Copyright (c) 2022 PersonNamedMike
 
-### Analyzing the Bundle Size
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

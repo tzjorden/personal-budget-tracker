@@ -8,7 +8,6 @@ function ExpenseForm({ expenses, setExpenses }) {
   const [dueDate, setDueDate] = useState("");
   const [notes, setNotes] = useState("");
   const [paid, setPaid] = useState(false);
-  let today = new Date().toISOString().slice(0, 10);
 
   function handleFrequency(e) {
     setFrequency(e.target.value);

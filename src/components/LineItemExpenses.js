@@ -21,7 +21,7 @@ function LineItemExpenses({
     })
       .then((resp) => resp.json())
       .then((resp) => {
-        console.log(resp);
+        // console.log(resp);
         setExpenses((currentExpenses) => {
           return currentExpenses.map((expense) =>
             expense.id == id ? resp : expense
@@ -59,13 +59,18 @@ function LineItemExpenses({
       <div className="line-item-box">{date}</div>
       <div className="line-item-box">{frequency}</div>
       <div className="line-item-box">{dueDate}</div>
-      <div className="line-item-box">{paid}</div>
-      <div className="line-item-box">{notes}</div>
-      <div className="line-item-box-btn">
+      <div className="line-item-box">
+        {paid}
         <button className="btn" onClick={handleMarkAsPaid} id={id}>
           {paid ? "✅" : "🅇"}
         </button>
       </div>
+      <div className="line-item-box">{notes}</div>
+      {/* <div className="line-item-box-btn">
+        <button className="btn" onClick={handleMarkAsPaid} id={id}>
+          {paid ? "✅" : "🅇"}
+        </button>
+      </div> */}
       <div className="line-item-box-btn">
         <button className="btn" onClick={handleDelete} id={id}>
           🗑

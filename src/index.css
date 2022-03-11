@@ -54,11 +54,11 @@ html {
 .line-item-header {
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  /* width: fit-content; */
+  width: auto;
   justify-content: center;
   height: auto;
-  width: min-content;
-  border: 3px solid;
+  border: 2px solid;
 }
 
 .line-item {
@@ -72,12 +72,12 @@ html {
 
 .line-item-box-header {
   display: flex;
-  border: none;
   padding: 0.2em;
   align-items: center;
-  width: 100px;
+  width: 111px;
   justify-content: center;
   background-color: rgb(252, 252, 252);
+  text-align: justify;
 }
 
 .line-item-box {

@@ -61,19 +61,19 @@ function ExpensesTable() {
           <div className="line-item-box-header">
             <strong>Due Date</strong>
           </div>
-          <div className="line-item-box-header">
-            <strong>Notes</strong>
-          </div>
-          <div className="line-item-box-header">
+          {/* <div className="line-item-box-header">
             <strong>Paid</strong>
-          </div>
+          </div> */}
           <div className="line-item-box-header">
             <strong>Status</strong>
+          </div>
+          <div className="line-item-box-header">
+            <strong>Notes</strong>
           </div>
         </div>
         <div className="list-table">{lineItemExpenses}</div>
 
-        <div>
+        {/* <div>
           <select
             className="filter-select"
             value={timeFrame}
@@ -88,6 +88,7 @@ function ExpensesTable() {
             <option value="all-time">All time</option>
           </select>
         </div>
+         */}
 
         <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
       </div>

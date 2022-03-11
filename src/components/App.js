@@ -12,8 +12,6 @@ function App() {
     <>
       <h1>Personal Budget Tracker</h1>
       <Navbar />
-      {/* <Tracker /> */}
-
       <Routes>
         <Route path="/" element={<Tracker />} />
         <Route path="/expenses" element={<ExpensesTable />} />

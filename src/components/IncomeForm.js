@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function IncomeForm({ incomes, setIncomes }) {
-  let today = new Date().toISOString().slice(0, 10);
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [amount, setAmount] = useState();
