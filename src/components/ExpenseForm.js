@@ -9,9 +9,9 @@ function ExpenseForm({ expenses, setExpenses }) {
   const [notes, setNotes] = useState("");
   const [paid, setPaid] = useState(false);
 
-  function handleFrequency(e) {
-    setFrequency(e.target.value);
-  }
+  // function handleFrequency(e) {
+  //   setFrequency(e.target.value);
+  // }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -33,8 +33,9 @@ function ExpenseForm({ expenses, setExpenses }) {
         Accept: "application/json",
       },
       body: JSON.stringify(newExpense),
-    });
-    setExpenses([...expenses, newExpense]);
+    })
+      .then((resp) => resp.json())
+      .then((resp) => setExpenses([...expenses, resp]));
     e.target.reset();
   }
 
@@ -93,7 +94,6 @@ function ExpenseForm({ expenses, setExpenses }) {
             value={dueDate}
             type="date"
             name="dueDate"
-            placeholder="Payment due date"
           />
         </label>
         <br></br>
