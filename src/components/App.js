@@ -11,12 +11,13 @@ function App() {
     <>
       <h1>Personal Budget Tracker</h1>
       <Navbar />
-      <Tracker />
+      {/* <Tracker /> */}
 
       <Routes>
-        <Route path="/income" element={<IncomeTable />} />
+        <Route path="/" element={<Tracker />} />
         <Route path="/expenses" element={<ExpensesTable />} />
-        {/* <Route path="/summary" element={<Summary />} /> */}
+        <Route path="/income" element={<IncomeTable />} />
+        <Route path="/summary" element={<Summary />} />
       </Routes>
     </>
   );
