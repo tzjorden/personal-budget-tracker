@@ -4,7 +4,7 @@
 
 # Project Description:
 
-This repository contains the frontend, which was originally intended to be used with the api in this repo: https://github.com/personnamedmike/phase-3-sinatra-react-project.
+This repository contains the frontend, which was originally intended to be used with the api in this repo: https://github.com/personnamedmike/personal-budget-tracker-api.
 
 This project was for "phase 3" of Flatiron School school's Software Engineering bootcamp. We had 4 days to complete a fullstack app. The assignment was to play around with Active Record, Sinatra, Ruby, and connect it with a React frontend.
 
@@ -22,7 +22,7 @@ Running this app on your local machine and storing data on a local sqlite3 datab
 
 Setup:
 
-1. Head over to this repo and follow the instructtions in that README.md file first: https://github.com/personnamedmike/phase-3-sinatra-react-project.
+1. Head over to this repo and follow the instructtions in that README.md file first: https://github.com/personnamedmike/personal-budget-tracker-api.
 2. After your server is up and running, fork and clone this repo.
 3. Navigate into the project directly, and run the following commands:
    % npm install && npm start
