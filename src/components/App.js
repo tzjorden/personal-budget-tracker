@@ -5,6 +5,7 @@ import Tracker from "./Tracker";
 import Summary from "./Summary";
 import IncomeTable from "./IncomeTable";
 import ExpensesTable from "./ExpensesTable";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/income" element={<IncomeTable />} />
         <Route path="/summary" element={<Summary />} />
       </Routes>
+      <Footer />
     </>
   );
 }
