@@ -12,7 +12,7 @@ function LineItemExpenses({
   setExpenses,
 }) {
   function handleMarkAsPaid(e) {
-    fetch(`http://localhost:9292/update_expense/${id}`, {
+    fetch(`https://mighty-basin-20153.herokuapp.com/update_expense/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ function LineItemExpenses({
   }
 
   function handleDelete(e) {
-    fetch(`http://localhost:9292/delete_expense/${id}`, {
+    fetch(`https://mighty-basin-20153.herokuapp.com/delete_expense/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

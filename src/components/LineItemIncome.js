@@ -4,7 +4,7 @@ function LineItemIncome({ description, amount, date, notes, id, setIncomes }) {
   // const [remove, setRemove] = useState(false);
 
   function handleDelete(e) {
-    fetch(`http://localhost:9292/delete_incomes/${id}`, {
+    fetch(`https://mighty-basin-20153.herokuapp.com/delete_incomes/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

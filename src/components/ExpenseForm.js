@@ -26,7 +26,7 @@ function ExpenseForm({ expenses, setExpenses }) {
       paid,
     };
 
-    fetch("http://localhost:9292/add_expenses", {
+    fetch("https://mighty-basin-20153.herokuapp.com/add_expenses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

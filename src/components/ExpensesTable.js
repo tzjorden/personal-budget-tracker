@@ -7,7 +7,7 @@ function ExpensesTable() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9292/expenses")
+    fetch("https://mighty-basin-20153.herokuapp.com/expenses")
       .then((r) => r.json())
       .then((expenses) => {
         // console.log(expenses);

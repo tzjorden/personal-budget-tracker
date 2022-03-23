@@ -7,14 +7,18 @@ function Summary() {
 
   function handleTimeframe(e) {
     setTimeframe(e.target.value);
-    fetch(`http://localhost:9292/expenses_summary/${e.target.value}`)
+    fetch(
+      `https://mighty-basin-20153.herokuapp.com/expenses_summary/${e.target.value}`
+    )
       .then((r) => r.json())
       .then((displayExpensesSummary) => {
         console.log(displayExpensesSummary);
         setDisplayExpensesSummary(displayExpensesSummary);
       });
 
-    fetch(`http://localhost:9292/incomes_summary/${e.target.value}`)
+    fetch(
+      `https://mighty-basin-20153.herokuapp.com/incomes_summary/${e.target.value}`
+    )
       .then((r) => r.json())
       .then((displayIncomesSummary) => {
         console.log(displayIncomesSummary);

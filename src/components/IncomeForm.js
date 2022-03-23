@@ -16,7 +16,7 @@ function IncomeForm({ incomes, setIncomes }) {
       notes,
     };
 
-    fetch("http://localhost:9292/add_income", {
+    fetch("https://mighty-basin-20153.herokuapp.com/add_income", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

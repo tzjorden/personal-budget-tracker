@@ -7,7 +7,7 @@ function IncomeTable() {
   const [incomes, setIncomes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9292/incomes")
+    fetch("https://mighty-basin-20153.herokuapp.com/incomes")
       .then((r) => r.json())
       .then((incomes) => {
         // console.log(incomes);
